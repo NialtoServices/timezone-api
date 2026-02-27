@@ -1,0 +1,23 @@
+{
+  "name": "timezone-api",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^25.3.2",
+    "countries-and-timezones": "^3.8.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build:timezones": "npx tsx scripts/build-timezones.ts",
+    "predev": "npm run build:timezones",
+    "dev": "wrangler dev",
+    "predeploy": "npm run build:timezones",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "wrangler": "^4.69.0"
+  }
+}
